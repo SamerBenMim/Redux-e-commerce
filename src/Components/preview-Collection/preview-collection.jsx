@@ -10,8 +10,11 @@ function previewCollection({title,items}) {
             {
                 items
                 .filter((item,idx) => idx<4 )
-                .map(({id,...others})=>(
-                 <CollectionItem key={id} {...others}></CollectionItem>
+                // .map(({id,...others})=>(
+                //  <CollectionItem key={id} {...others}></CollectionItem>
+                //  ))
+                .map((item)=>(
+                 <CollectionItem key={item.id} item={item}></CollectionItem>
                  ))
             }
             
